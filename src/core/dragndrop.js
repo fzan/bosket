@@ -46,7 +46,12 @@ export const dragndrop = {
         backup: [],
         drag: (item: Object, event: DragEvent, inputs: Object) => {
             bak = JSON.stringify(model())
-            event.dataTransfer && event.dataTransfer.setData("application/json", JSON.stringify(item))
+            let isIE = false || !!document.documentMode
+            let dataType = "application/json"
+            if (isIE) {
+                dataType = "Text"
+            }
+            event.dataTransfer && event.dataTransfer.setData(dataType, JSON.stringify(item))
             setTimeout(() => cb(tree(model(), inputs.category).filter(e => e !== item)), 20)
         },
         cancel: () => {
@@ -57,8 +62,20 @@ export const dragndrop = {
     paste: (model: void => Object[], cb: Object[] => void) => ({
         droppable: true,
         drop: (target: Object, event: DragEvent, inputs: Object) => {
-            if(event.dataTransfer && event.dataTransfer.types.indexOf("application/json") > -1) {
-                const data = JSON.parse(event.dataTransfer.getData("application/json"))
+            const isIE = false || !!document.documentMode
+
+            let dataType = "application/json"
+            let dataTransferCond = false
+            if(isIE) {
+                dataType = "Text"
+                dataTransferCond = event.dataTransfer && event.dataTransfer.types.contains(dataType)
+            }
+            else {
+                dataTransferCond = event.dataTransfer && event.dataTransfer.types.indexOf(dataType) !== -1
+            }
+            if(dataTransferCond && event.dataTransfer.types.indexOf(dataType) > -1) {
+
+                const data = JSON.parse(event.dataTransfer.getData(dataType))
                 let updatedModel = [...model()]
                 const adjustedTarget =
                     target ?

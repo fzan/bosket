@@ -1,3 +1,0 @@
-// @flow
-
-declare export var printer: {debug: (title: string, msg: string, logger?: (_: string, ...params: Array<string>) => void) => void};

@@ -1,8 +1,0 @@
-// @flow
-
-import type {factory, ClassComponent} from "./helpers";
-declare export function combine(...factories: Array<<mixed /* UNEXPECTED TYPE: EmptyT */>(_: Class<React$Component<P, S>> | <P>(props: P) => ?$Exact<{+key: string | number | null, +props: mixed /* UNEXPECTED TYPE: EvalT */, +ref: any, +type: ElementType}>) => Class<React$Component<P, S>>>): <P: any>(Component: Class<React$Component<P, S>>) => Class<React$Component<P, S>>;
-declare export var withDebugUpdates: <_ = any>(_: Object) => <mixed /* UNEXPECTED TYPE: ExistsT */>(_: Class<React$Component<P, S>> | <P>(props: P) => ?$Exact<{+key: string | number | null, +props: mixed /* UNEXPECTED TYPE: EvalT */, +ref: any, +type: ElementType}>) => Class<React$Component<P, S>>;
-declare export var withLabels: <_ = any>(_: Object) => <mixed /* UNEXPECTED TYPE: ExistsT */>(_: Class<React$Component<P, S>> | <P>(props: P) => ?$Exact<{+key: string | number | null, +props: mixed /* UNEXPECTED TYPE: EvalT */, +ref: any, +type: ElementType}>) => Class<React$Component<P, S>>;
-declare export var withListener: <_ = any>(_: Object) => <mixed /* UNEXPECTED TYPE: ExistsT */>(_: Class<React$Component<P, S>> | <P>(props: P) => ?$Exact<{+key: string | number | null, +props: mixed /* UNEXPECTED TYPE: EvalT */, +ref: any, +type: ElementType}>) => Class<React$Component<P, S>>;
-declare export var withTransition: <_ = any>(_: Object) => <mixed /* UNEXPECTED TYPE: ExistsT */>(_: Class<React$Component<P, S>> | <P>(props: P) => ?$Exact<{+key: string | number | null, +props: mixed /* UNEXPECTED TYPE: EvalT */, +ref: any, +type: ElementType}>) => Class<React$Component<P, S>>;

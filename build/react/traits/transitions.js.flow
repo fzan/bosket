@@ -1,7 +1,0 @@
-// @flow
-
-import {displayName} from "./helpers";
-import type {trait} from "./helpers";
-import {CSSTransitionGroup} from "react-transition-group";
-import React from "react";
-declare export var withTransition: <_ = any>(_: Object) => <mixed /* UNEXPECTED TYPE: ExistsT */>(_: Class<React$Component<P, S>> | <P>(props: P) => ?$Exact<{+key: string | number | null, +props: mixed /* UNEXPECTED TYPE: EvalT */, +ref: any, +type: ElementType}>) => Class<React$Component<P, S>>;

@@ -1,9 +1,0 @@
-// @flow
-
-import type {TreeNodeInput} from "@bosket/core";
-import type {Key} from "react";
-import {withTransition} from "../traits";
-import {TreeNode} from "@bosket/core";
-import {array} from "@bosket/tools";
-import React from "react";
-declare export var TreeViewNode: Class<React$Component<P, S>>;

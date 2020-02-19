@@ -1,3 +1,0 @@
-// @flow
-
-declare export function string(str: string): {contains: (input: string) => boolean};

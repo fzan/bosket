@@ -65,8 +65,6 @@ rules:
           after: false
         catch:
           after: false
-  linebreak-style:
-    - error
   new-cap:
     - warn
   new-parens:
